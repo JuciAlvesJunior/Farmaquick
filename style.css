@@ -1,0 +1,181 @@
+/* Estilos globais */
+
+body {
+    font-family: 'Lexend', sans-serif; /* Define a fonte padrão */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimento padrão */
+}
+
+header {
+    background-color: #FFD700;
+    display: flex; /* Transforma o header em um container flexbox */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    padding: 20px;
+  }
+  
+  .header-content { /* Criamos um container para a imagem e o título */
+    display: flex;
+    align-items: center;
+  }
+  
+  .icone {
+    width: 50px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: 50px;
+    margin-right: 10px; /* Adiciona um espaço à direita da imagem */
+  }
+
+.farmaquick-info {
+    /* Estilos gerais da div */
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+    /* Estilos para os parágrafos */
+    p {
+        margin-bottom: 15px;
+        text-align: justify;
+    }
+
+    /* Estilo para o parágrafo com o aviso importante */
+    p:nth-child(3) {
+        font-weight: bold;
+        color: #c0392b; /* Cor vermelha para destacar o aviso */
+    }
+}
+
+.search-container {
+    display: flex; /* Exibe os elementos como flexbox */
+    justify-content: center; /* Alinha os elementos horizontalmente no centro */
+    align-items: center; /* Alinha os elementos verticalmente no centro */
+    margin: 20px; /* Adiciona margem externa */
+}
+
+#search-input {
+    padding: 10px; /* Adiciona espaço interno */
+    border-left: 1px solid #000; /* Adiciona borda esquerda */
+    border-right: none; /* Remove borda direita */
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    flex: 1; /* Ocupa o espaço restante dentro do container */
+}
+
+#search-button {
+    background-color: #FFD700;
+    color: #000;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-left: none;
+    border-right: 1px solid #000;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+#results {
+    display: flex; /* Exibe os resultados como flexbox */
+    flex-wrap: wrap; /* Permite que os resultados quebrem para novas linhas */
+    justify-content: center; /* Alinha os resultados horizontalmente no centro */
+    margin-bottom: 6em; /* Adiciona margem inferior */
+}
+
+.medicine-card {
+    /* Cartão de medicamento */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    width: 250px;
+    text-align: center;
+    height: 300px; /* Aumenta a altura do card */
+}
+
+.medicine-card .header {
+    /* Cabeçalho do cartão */
+    background-color: #FFD700;
+    font-size: 24px; /* Aumenta o tamanho da fonte do nome */
+    padding: 20px; /* Adiciona espaço interno */
+}
+
+.medicine-card .body {
+    /* Corpo do cartão */
+    background-color: #FF0000;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.medicine-card .footer {
+    /* Rodapé do cartão */
+    background-color: #FFF;
+    padding: 10px;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.medicine-card .footer a {
+    margin-top: 1em;
+    text-decoration: none;
+    color: #000;
+}
+
+.medicine-card .footer .cha-substituto {
+    margin-top: 2em;
+    font-weight: bold;
+    color: #000;
+}
+
+.disclaimer {
+    font-style: italic;
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FF0000;
+    color: #FFF;
+    text-align: center;
+    padding: 10px;
+}
+@media (max-width: 768px) {
+    /* Estilos para telas menores (tablets e smartphones) */
+    .search-container {
+        flex-direction: column;
+        align-items: center; /* Centraliza os elementos verticalmente */
+    }
+
+    #search-input,
+    #search-button {
+        width: 100%; /* Ocupa toda a largura da tela */
+        margin-bottom: 10px;
+        border:  1px #000 solid;
+    }
+
+    .medicine-card {
+        width: 100%;
+        height: auto; /* Permite que o card se ajuste ao conteúdo */
+    }
+
+    .medicine-card .header {
+        font-size: 20px; /* Reduz o tamanho da fonte para telas menores */
+    }
+
+    .medicine-card .body {
+        font-size: 16px;
+    }
+
+    /* Adicionando mais espaço entre os cards para melhor visualização em telas menores */
+    .medicine-card {
+        margin: 20px;
+    }
+}
